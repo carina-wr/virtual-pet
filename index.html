@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+            body {
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: bold
+            }
+
+            .pet-name {
+                font-size: 32px;
+            }
+
+            .header {
+                padding: 32px;
+            }
+
+            .main {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .pet-image {
+                height: 500px;
+                max-width: 100%;
+                padding: 32px;
+            }
+
+            .image-area {
+                background-color: black;
+                display: grid;
+                justify-items: center;
+            }
+
+            .interactive-area {
+                background-color: darkgreen;
+                display: grid;
+                align-items: center;
+                justify-items: center;
+            }
+
+            .activity-icon {
+                height: 40px;
+                width: 40px;
+            }
+
+            .activity-row {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                width: 90%;
+                align-items:center;
+                padding: 0 1rem;
+            }
+
+            .activity-button {
+                background-color: #b27499;
+                border-radius: 8px;
+                box-shadow: 0 0 5px 0 grey;
+                color: white;
+                cursor: pointer;
+                height: 100%;
+                display: grid;
+                align-items: center;
+                justify-items: center;
+            }
+            
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="header">
+
+            <div class="pet-name">Zooweemama</div>
+            <div class="description">He's just trying to help his friends fix their ship to get home... until he's not.</div>
+
+        </div>
+
+        <div class="main">
+
+            <div class="image-area"> 
+                <img class="pet-image" src="neutral.jpg">
+            </div>
+
+            <div class="interactive-area">
+
+                <div class="activity-row">
+                    <img class="activity-icon" src="food.jpg">
+                    <div class="activity-stat">50</div>
+                    <div class="activity-button" onclick="giveFood()">Eat space food</div>
+                </div>
+
+                <div class="activity-row">
+                    <img class="activity-icon" src="water.jpg">
+                    <div class="activity-stat">80</div>
+                    <div class="activity-button" onclick="console.log('Hello!')">Fill water</div>
+                </div>
+
+                <div class="activity-row">
+                    <img class="activity-icon" src="exercise.gif">
+                    <div class="activity-stat">60</div>
+                    <div class="activity-button" onclick="console.log('Hello!')">Exercise</div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+    <script>
+
+        var food = 50
+        var water = 50
+        var exercise = 50
+
+        var giveFood = () => {
+            console.log(food)
+            food = food + 15
+        }
+        
+    </script>
+</html>
